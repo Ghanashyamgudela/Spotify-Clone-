@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pritam.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h3>
+                Music
+            </h3>
+        </nav>
+
+
+    </header>
+    <div class="play-song">
+        <div class="gon">
+            <li class="song-item">
+                <span>01</span>
+                <img src="https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/98/96/57/989657b7-b2b7-2a01-c3bd-165618e0decc/8902894350143_cover.jpg/1400x1400bb.jpg">
+                <h5>Krishna Leaving Vrindavan
+                    <div class="subtitle">
+                        Pranab Kumar, Shreya Ghoshal
+                    </div>
+                </h5>
+                <i class="fa-solid playListPlay fa-play " id="1"></i>
+            </li>
+
+            <li class="song-item">
+                <span>02</span>
+                <img src="https://c.saavncdn.com/909/Madhurashtakam-Adharam-Madhuram-Sanskrit-2025-20250310165855-500x500.jpg">
+                <h5>Adharam Madhuram
+                    <div class="subtitle">
+                        Jaya Vidyasagar
+                    </div>
+                </h5>
+                <i class="fa-solid playListPlay fa-play" id="2"></i>
+            </li>
+
+            <li class="song-item">
+                <span>03</span>
+                <img src="https://i.scdn.co/image/ab67616d00001e02bc0491907ed762f2c6860ad1">
+                <h5>Radha Gori Gori
+                    <div class="subtitle">
+                         B Praak, Indresh Upadhyay
+                    </div>
+                </h5>
+                <i class="fa-solid playListPlay fa-play" id="3"></i>
+            </li>
+
+            <li class="song-item">
+                <span>04</span>
+                <img src="https://c.saavncdn.com/448/Radha-Rani-Lage-Hindi-2023-20230407151645-500x500.jpg">
+                <h5>Raha Rani Lage
+                    <div class="subtitle">
+                        Simpal Kharel
+
+                    </div>
+                </h5>
+                <i class="fa-solid playListPlay fa-play" id="4"></i>
+            </li>
+
+            
+            
+
+            
+        </div>
+    </div>
+    <div class="content">
+        <h1>Radha Rani Songs</h1>
+        <p>"Radhe Radhe"</p>
+
+        <footer>
+            <div class="music_bar">
+                <div class="start-end">
+                    <span id="current-start">0:00</span>
+                    <div class="bar">
+                        <input type="range" id="seek" min="0" max="100">
+                        <div class="bar2" id="bar2"></div>
+                        <div class="dot"></div>
+                    </div>
+
+                    <span id="current-end">0:30</span>
+                </div>
+            </div>
+            <div class="icon">
+                <i class="fa-solid shuffle fa-music" data-mode="next"></i>
+                <i class="fa-solid backward-step fa-backward" id="back"></i>
+                <i class="fa-solid playListPlay fa-play" id="masterPlay"></i>
+
+                <i class="fa-solid forward-step fa-forward" id="next"></i>
+            </div>
+
+            <div class="vol">
+                <i class="fa-solid fa-volume-high" id="vol-icon"></i>
+                <input type="range" id="vol" min="0" max="100" value="100">
+                <div class="dot" id="vol-dot"></div>
+                <div class="vol-bar"></div>
+            </div>
+
+        </footer>
+
+    </div>
+    <script src="./radha.js"></script>
+</body>
+
+</html>

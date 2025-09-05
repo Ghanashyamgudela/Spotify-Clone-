@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pritam.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h3>
+                Music
+            </h3>
+        </nav>
+
+
+    </header>
+    <div class="play-song">
+        <div class="gon">
+            <li class="song-item">
+                <span>01</span>
+                <img src="https://c.saavncdn.com/493/Baarish-Mein-Tum-Hindi-2022-20220902211010-500x500.jpg">
+                <h5>Baarish mein tum
+                    <div class="subtitle">
+                        Neha Kakar </div>
+                </h5>
+                <i class="fa-solid playListPlay fa-play " id="1"></i>
+            </li>
+
+            <li class="song-item">
+                <span>02</span>
+                <img src="https://i1.sndcdn.com/artworks-000206439382-dl93jq-t500x500.jpg">
+                <h5>Badri Nadh Ki Dulhania
+                    <div class="subtitle">
+                        Neha Kakar
+                    </div>
+                </h5>
+                <i class="fa-solid playListPlay fa-play" id="2"></i>
+            </li>
+
+            <li class="song-item">
+                <span>03</span>
+                <img src="https://s.saregama.tech/image/c/fw_485/a/fd/91/kala-chashma_1477571181.jpg">
+                <h5>Kala Chashma
+                    <div class="subtitle">
+                        Neha Kakar
+                    </div>
+                </h5>
+                <i class="fa-solid playListPlay fa-play" id="3"></i>
+            </li>
+
+            <li class="song-item">
+                <span>04</span>
+                <img src="https://images.genius.com/273dd7ca60e7935d91c872f0ef2ef296.1000x1000x1.jpg">
+                <h5>Unchi Hai Building
+
+                    <div class="subtitle">
+                        Neha Kakar
+                    </div>
+                </h5>
+                <i class="fa-solid playListPlay fa-play" id="4"></i>
+            </li>
+
+            <li class="song-item">
+                <span>05</span>
+                <img src="https://image-cdn-ak.spotifycdn.com/image/ab67706c0000da84828d989130afbd13be27bf16">
+                <h5>Yaad Piya Ke
+                    <div class="subtitle">
+                        Neha Kakar
+                    </div>
+                </h5>
+                <i class="fa-solid playListPlay fa-play" id="5"></i>
+            </li>
+   <li class="song-item">
+                <span>06</span>
+                <img src="https://st1.bollywoodlife.com/wp-content/uploads/2019/12/Tu-Hi-Yaar-Mera-TRENDING-TUNES-.jpg">
+                <h5>Tu Hi Yaar Meera
+                    <div class="subtitle">
+                        Neha Kakar
+                    </div>
+                </h5>
+                <i class="fa-solid playListPlay fa-play" id="5"></i>
+            </li>
+
+        </div>
+    </div>
+    <div class="content">
+        <h1>Neha Kakar</h1>
+        <p>Sherya Ghoshal</p>
+
+        <footer>
+            <div class="music_bar">
+                <div class="start-end">
+                    <span id="current-start">0:00</span>
+                    <div class="bar">
+                        <input type="range" id="seek" min="0" max="100">
+                        <div class="bar2" id="bar2"></div>
+                        <div class="dot"></div>
+                    </div>
+
+                    <span id="current-end">0:30</span>
+                </div>
+            </div>
+            <div class="icon">
+                <i class="fa-solid shuffle fa-music" data-mode="next"></i>
+                <i class="fa-solid backward-step fa-backward" id="back"></i>
+                <i class="fa-solid playListPlay fa-play" id="masterPlay"></i>
+
+                <i class="fa-solid forward-step fa-forward" id="next"></i>
+            </div>
+
+            <div class="vol">
+                <i class="fa-solid fa-volume-high" id="vol-icon"></i>
+                <input type="range" id="vol" min="0" max="100" value="100">
+                <div class="dot" id="vol-dot"></div>
+                <div class="vol-bar"></div>
+            </div>
+
+        </footer>
+
+    </div>
+    <script src="./neha.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="pritam.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css"
+        integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <h3>
+                Music
+            </h3>
+        </nav>
+
+
+    </header>
+    <div class="play-song">
+        <div class="gon">
+            <li class="song-item">
+                <span>01</span>
+                <img src="https://c.saavncdn.com/000/Preminche-Premava-Lofi-Mix-From-Nuvvu-Nenu-Prema-Telugu-2024-20240724132138-500x500.jpg">
+                <h5>Preminche Premava
+                    <div class="subtitle">
+                        Naresh Ayar, Shreya Ghoshal </div>
+                </h5>
+                <i class="fa-solid playListPlay fa-play " id="1"></i>
+            </li>
+
+            <li class="song-item">
+                <span>02</span>
+                <img src="https://s.saregama.tech/image/c/m/4/11/c1/sanam-aajkal-tere-mere-pyar-ke-charche-dd5345_1440x1440_1568883053.jpg">
+                <h5>Aaj Kal Tere Mere Pyar Ke 
+                    <div class="subtitle">
+                         Mohammed Rafi, Suman Kalyanpur
+                    </div>
+                </h5>
+                <i class="fa-solid playListPlay fa-play" id="2"></i>
+            </li>
+
+            <li class="song-item">
+                <span>03</span>
+                <img src="https://s.saregama.tech/image/c/fw_485/0/de/87/yeh-raaten-yeh-mausam-sanam_1527228767.jpg">
+                <h5>Yeh Raatein Yeh Mausam
+                    <div class="subtitle">
+                        Kishore Kumar, Asha Bhosle
+                    </div>
+                </h5>
+                <i class="fa-solid playListPlay fa-play" id="3"></i>
+            </li>
+
+            
+            <li class="song-item">
+                <span>04</span>
+                <img src="https://www.shazam.com/mkimage/image/thumb/Music126/v4/5a/8f/69/5a8f695e-ae89-c09a-3d6d-b2a7bdfba4d6/197188715564.jpg/1275x1275bb-60.webp">
+                <h5>Abhi Na Jao Chhod Kar
+                    <div class="subtitle">
+                        Mohammed Rafi, Asha Bhosle
+                    </div>
+                </h5>
+                <i class="fa-solid playListPlay fa-play" id="3"></i>
+            </li>
+           
+
+           
+        </div>
+    </div>
+    <div class="content">
+        <h1>Old Songs</h1>
+        <p>Old is Gold - Retro </p>
+
+        <footer>
+            <div class="music_bar">
+                <div class="start-end">
+                    <span id="current-start">0:00</span>
+                    <div class="bar">
+                        <input type="range" id="seek" min="0" max="100">
+                        <div class="bar2" id="bar2"></div>
+                        <div class="dot"></div>
+                    </div>
+
+                    <span id="current-end">0:30</span>
+                </div>
+            </div>
+            <div class="icon">
+                <i class="fa-solid shuffle fa-music" data-mode="next"></i>
+                <i class="fa-solid backward-step fa-backward" id="back"></i>
+                <i class="fa-solid playListPlay fa-play" id="masterPlay"></i>
+
+                <i class="fa-solid forward-step fa-forward" id="next"></i>
+            </div>
+
+            <div class="vol">
+                <i class="fa-solid fa-volume-high" id="vol-icon"></i>
+                <input type="range" id="vol" min="0" max="100" value="100">
+                <div class="dot" id="vol-dot"></div>
+                <div class="vol-bar"></div>
+            </div>
+
+        </footer>
+
+    </div>
+    <script src="./old.js"></script>
+</body>
+
+</html>

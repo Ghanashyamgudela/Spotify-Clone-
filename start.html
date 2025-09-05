@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Spotify Clone</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.0/css/all.min.css" integrity="sha512-DxV+EoADOkOygM4IR9yXP8Sb2qwgidEmeqAEmDKIOfPRQZOWbXCzLC6vjbZyy0vPisbH2SyW27+ddLVCN+OMzQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(135deg, #181818 0%, #1db954 100%);
+      color: #fff;
+    }
+    header {
+      display: flex;
+            background: rgba(24, 24, 24, 0.85);
+
+      justify-content: space-between;
+      align-items: center;
+      padding: 12px 20px;
+     box-shadow: 0 4px 24px 0 rgba(0,0,0,0.25);
+      border-bottom: 1px solid rgba(255,255,255,0.05);
+      backdrop-filter: blur(8px);
+      position: sticky;
+      top: 0;
+    }
+    header .logo i {
+      font-size: 2rem;
+      color: #1db954;
+    }
+    header .search h1 {
+      font-family: 'Montserrat', sans-serif;
+      letter-spacing: 1px;
+      text-shadow: 0 2px 8px #1db95444;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+    header .log-in--sign-up {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      position: relative;
+    }
+    header .log-in--sign-up button {
+      margin-left: 0;
+      padding: 6px 12px;
+      border: 2px solid white;
+      border-radius: 10px;
+      background-color: #0b9c0d;
+      color: white;
+      cursor: pointer;
+      font-size: 1rem;
+      transition: background 0.2s ease;
+    }
+    header .log-in--sign-up button:hover {
+      background: #1ed760;
+      transform: scale(1.05);
+    }
+    header .log-in--sign-up button a {
+      text-decoration: none;
+      color: white;
+    }
+    /* Dropdown menu for mobile */
+    .mobile-menu-btn {
+      display: none;
+      background: none;
+      border: none;
+      color: #1db954;
+      font-size: 2rem;
+      cursor: pointer;
+      margin-left: 10px;
+      z-index: 20;
+    }
+    .mobile-nav-links {
+      display: none;
+      flex-direction: column;
+      background: rgba(24, 24, 24, 0.97);
+      position: absolute;
+      top: 60px;
+      right: 0;
+      min-width: 140px;
+      border-radius: 12px;
+      box-shadow: 0 8px 32px 0 #1db95433;
+      padding: 12px 0;
+      z-index: 100;
+    }
+    .mobile-nav-links button {
+      width: 100%;
+      background: none;
+      border: none;
+      color: #fff;
+      padding: 12px 24px;
+      text-align: left;
+      font-size: 1rem;
+      cursor: pointer;
+      border-radius: 0;
+      transition: background 0.2s;
+    }
+    .mobile-nav-links button:hover {
+      background: #1db954;
+      color: #181818;
+    }
+    .content {
+      display: flex;
+      gap: 1%;
+      padding: 10px;
+    }
+    .content iframe {
+      border: none;
+    }
+    .content iframe:first-child {
+      width: 24%;
+      border-radius: 25px;
+      height: 700px;
+    }
+    .content iframe:last-child {
+      width: 75%;
+      border-radius: 25px;
+      height: 700px;
+    }
+    /* Responsive */
+    @media (max-width: 768px) {
+      .content {
+        flex-direction: column;
+      }
+      .content iframe:first-child,
+      .content iframe:last-child {
+        width: 100%;
+        height: 300px;
+      }
+      iframe:first-child {
+        margin-bottom: 20px;
+      }
+      .mobile-menu-btn i{
+        margin-top: 12px;
+        position: absolute;
+        top: 30px;
+        right: 59px;
+      }
+    }
+    @media (max-width: 480px) {
+      header {
+        flex-direction: column;
+        text-align: center;
+      }
+      .log-in--sign-up {
+        display: none !important;
+      }
+      .mobile-menu-btn {
+        display: block;
+      }
+      .content iframe:first-child,
+      .content iframe:last-child {
+        height: 650px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="main">
+    <header>
+      <div class="logo">
+        <a href="#"><i class="fa-brands fa-spotify fa-flip"></i></a>
+      </div>
+      <div class="search">
+        <h1>Spotify</h1>
+      </div>
+      <div class="log-in--sign-up">
+        <button class="sign-up"><a href="./index.html">Sign Up</a></button>
+        <button class="login-in"><a href="./login-in.html">Log in</a></button>
+      </div>
+      <button class="mobile-menu-btn" id="mobileMenuBtn" aria-label="Menu">
+        <i class="fa fa-bars"></i>
+      </button>
+      <div class="mobile-nav-links" id="mobileNavLinks">
+        <button onclick="window.location.href='./index.html'">Sign Up</button>
+        <button onclick="window.location.href='./login-in.html'">Log in</button>
+      </div>
+    </header>
+    <div class="content">
+      <iframe src="./welcome.html" name="song-frame"></iframe>
+      <iframe src="./frame.html"></iframe>
+    </div>
+  </div>
+  <script>
+    // Mobile dropdown menu toggle
+    const menuBtn = document.getElementById('mobileMenuBtn');
+    const navLinks = document.getElementById('mobileNavLinks');
+    document.addEventListener('click', function (e) {
+      if (menuBtn && navLinks) {
+        if (menuBtn.contains(e.target)) {
+          navLinks.style.display = navLinks.style.display === 'flex' ? 'none' : 'flex';
+        } else if (!navLinks.contains(e.target)) {
+          navLinks.style.display = 'none';
+        }
+      }
+    });
+  </script>
+  <script src="./script.js"></script>
+</body>
+</html>

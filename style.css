@@ -1,0 +1,81 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    background-color: #000000;
+    color: #fff;
+
+}
+header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 9vh;
+
+}
+@media (max-width: 480px) {
+        .all-artist .artist-item img{
+  width: min(28vw, 120px);   
+  height: min(28vw, 120px);  
+  object-fit: cover;         
+  border-radius: 50%;        
+  display: block;
+}}
+     
+.logo{
+    margin-left: 30px;
+}
+.logo i{
+    font-size: 35px;
+
+}
+.logo a{
+    color: #1db954;
+}
+.search h1{
+    color: #1db954;
+    font-size: 5vh;
+}
+.log-in--sign-up{
+    margin-right: 8px;
+}
+.log-in--sign-up button.sign-up{
+    height: 4vh;
+    width: 9vh;
+    border: none;
+    font-size: 17px;
+    margin-right: 20px;
+    background-color: #000000;
+}
+.log-in--sign-up button.sign-up a{
+   color: #fff;
+   text-decoration: none;
+}
+.log-in--sign-up button.sign-up:hover,button.sign-up a:hover{
+    transform: translate(0, -2px);
+    color: rgba(225,225,225,0.241);
+}
+.log-in--sign-up button.login-in{
+    height: 4vh;
+    width: 15vh;
+    border-radius: 28px;
+    border: none;
+    font-size: 17px;
+}
+.log-in--sign-up button.login-in a{
+    color: rgba(18,18,18);
+    text-decoration: transparent;
+    padding: 14px;
+}
+.log-in--sign-up button.login-in:hover,button.login-in:hover{
+    background-color: rgba(255,255,255,0.822);
+    transform: translate(0, -2px);
+
+}
+iframe{
+    border: none;
+    border-radius: 9px;
+}
